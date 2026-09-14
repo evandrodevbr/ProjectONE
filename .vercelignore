@@ -1,0 +1,6 @@
+# O deploy na Vercel é estático e não executa PHP.
+# Sem esta exclusão, os fontes .php são publicados como texto puro (vazamento de código-fonte).
+*.php
+sql/
+_notes/
+style_bkp/

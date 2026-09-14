@@ -134,7 +134,7 @@ Não há build. O artefato é o próprio código-fonte.
 
 **Aplicação completa (PHP + MySQL):** publique a raiz do repositório em um servidor com PHP e `mysqli` (Apache, nginx + php-fpm, ou o WAMP original) e aponte as variáveis `DB_*` para o banco de produção. Não há arquivo de configuração de servidor versionado.
 
-**Parte estática:** o repositório tem o campo homepage apontando para `https://project-one-three.vercel.app`, que serve as páginas HTML. **Atenção:** o Vercel trata arquivos `.php` como estáticos e os devolve como texto puro, ou seja, `https://project-one-three.vercel.app/login.php` expõe o código-fonte do arquivo. Os endpoints PHP não executam nesse deploy. Isso está registrado nas limitações abaixo.
+**Parte estática:** o repositório tem o campo homepage apontando para `https://project-one-three.vercel.app`, que serve as páginas HTML. **Atenção:** o Vercel trata arquivos `.php` como estáticos e os devolve como texto puro, ou seja, `https://project-one-three.vercel.app/login.php` expõe o código-fonte do arquivo. Os endpoints PHP não executam nesse deploy. Para impedir a publicação dos fontes, o repositório agora tem um `.vercelignore` que exclui `*.php` (e pastas internas) do upload; o deploy em produção ainda serve a cópia antiga até ser refeito. Isso está registrado nas limitações abaixo.
 
 ## Estrutura do projeto
 
